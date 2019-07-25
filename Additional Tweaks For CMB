@@ -1,0 +1,598 @@
+/* These are my own personal customized tweaks for CMB.  I love CMB and the hard work done by Aris on this add-on.  These tweaks
+that are made possible by the user CSS section of CMB are for my own personal preference.  Maybe others will find some of them useful.
+You can see pictures of how these tweaks affect Thunderbird and its Calendar at these links
+https://github.com/JYLD/User-CSS-For-Firefox-And-Thunderbird/blob/master/MyThunderbirdSetup.png and
+https://github.com/JYLD/User-CSS-For-Firefox-And-Thunderbird/blob/master/My%20Thunderbird%20Calendar.png */
+
+/* ______General, Mail Tab, And Other Tabs Configuration_____*/
+
+ /* remove top toolbar shadows */
+#mail-toolbox,
+.mail-toolbox,
+#mail-toolbar-menubar2,
+#tabs-toolbar,
+#tabs-toolbar .tab-text,
+#tabs-toolbar .tabmail-tab[selected=true],
+#tabs-toolbar .tabmail-tab:not([selected=true]),
+#tabs-toolbar::after,
+#tabs-toolbar::before {
+/*   
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+*/
+    text-shadow: none !important;
+}
+
+/* This is the menubar */
+/* #mail-toolbar-menubar2 {
+    background-color: #000000 !important;
+}
+*/
+
+#mail-toolbox {	   
+/*    background-color: #D8EFFE !important;    */
+
+    background: rgba(224,224,224,.6)
+                  linear-gradient(rgba(170,232,252,.8), rgba(47,141,235,.6) 49%,
+                                                      rgba(32,133,234,.6) 51%, rgba(20,114,208,.3)) !important;
+
+    color: #12298E !important;
+    font-weight: 590 !important;
+}
+
+#mail-toolbox toolbarbutton {
+    background-color: rgba(255,255,255,.9) !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+#tabs-toolbar {	   
+/*    background-color: #E7F7FE !important;   /**/
+/*    color: black !important;  */
+}
+
+#tabs-toolbar .tabmail-tab[selected=true] { 
+    font-size: 100% !important;
+    font-weight: 600 !important;
+    color: black !important;
+    text-decoration: underline solid #000000 !important;
+/*    background-image: none !important;  */
+/*    background-color: none !important;
+    background-color: #E9F0F3 !important;
+    background-color: #2085EA !important;
+*/
+    background-color: #07B8F3  !important;
+    margin-left: 1px !important;
+    margin-right: 0px !important;
+    border-radius: 9px 9px 0px 0px !important;
+    border: 1px solid #759AB3 !important;
+    border-bottom: 0px solid transparent !important;
+    text-shadow: none !important;
+} 
+
+#tabs-toolbar .tabmail-tab[selected=true]:hover {
+    color: #BC0030 !important;
+    text-decoration: underline solid #BC0030 !important;
+    text-shadow: none !important;
+}     
+
+#tabs-toolbar .tabmail-tab:not([selected=true]) { 
+    color: #F8F9FA !important;
+    font-weight: 500 !important;
+/*    background-image: none !important;  */
+    background: rgba(18,104,190,.05)
+                  linear-gradient(rgba(170,232,252,.8), rgba(47,141,235,.6) 49%,
+                                                      rgba(32,133,234,.6) 51%, rgba(20,114,208,.3)) !important;
+/*    background-color: #2085EA !important;  */
+    margin-left: 1px !important;
+    margin-right: 0px !important;
+    border-radius: 9px 9px 0px 0px !important;
+    border: 1px solid #2D6799 !important;
+/*    border-bottom: 2px solid #20496C !important;  */
+    border-bottom: 0px solid transparent !important;
+    text-shadow: none !important;
+} 
+
+#tabs-toolbar .tabmail-tab:not([selected=true]):hover {
+    color: #F8F9FA !important;;
+    font-weight: 500 !important;
+    text-shadow: none !important;
+ }
+
+#tabs-toolbar .tab-text {
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+}    
+
+#quick-filter-bar-main-bar {
+    background-color: #465966 !important;
+    color: #FFFFFF !important;
+    border: 0px solid transparent !important;
+}
+
+/* ______Mail Folder Tree And Email Thread Tree_____*/
+
+#threadTree treechildren::-moz-tree-row(odd) { 
+    background-color: #E7F7FE !important; 
+    border: 0px solid transparent !important;
+    padding-top: 4px !important;
+} 
+
+#threadTree treechildren::-moz-tree-row(even) { 
+    background-color: #F9FEFF !important; 
+    border: 0px solid transparent !important;
+    padding-top: 4px !important;
+} 
+
+#threadTree treechildren::-moz-tree-row(hover) { 
+    background-color: #AEDDFC !important;
+    border: 0px solid transparent !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+} 
+
+#threadTree treechildren::-moz-tree-row(selected) { 
+    background-color: #FFD0F8 !important; 
+    border: 0px solid transparent !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+} 
+
+#threadTree treechildren::-moz-tree-row(selected, focus) { 
+    background-color: highlight !important; 
+    border: 0px solid transparent !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+} 
+
+#threadTree treechildren::-moz-tree-row { 
+    height: 22px !important; 
+    min-height: 22px !important; 
+    padding-top: 3px !important;
+    border: 0px solid transparent !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+} 
+
+#threadTree { 
+/*    padding-right: 0px !important;  */
+/*    border-right: 3px solid #465966 !important;  */
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+} 
+
+#folderTree { 
+    background-color: #465966 !important; 
+    color: #FFFFFF !important; 
+    font-weight: 400 !important;
+    border: 0px solid transparent !important;
+    margin-top: -1px !important;
+} 
+
+#folderTree > treechildren::-moz-tree-row(hover) { 
+    background-color: #2085EA !important; 
+    border: 0px solid transparent !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+} 
+
+#folderTree > treechildren::-moz-tree-row(selected) { 
+    background-color: #F0EFEE !important; 
+    border: 0px solid transparent !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+}
+
+#folderTree > treechildren::-moz-tree-row(selected, focus) { 
+    background-color: Highlight !important; 
+    border: 0px solid transparent !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+}
+
+#folderTree > treechildren::-moz-tree-row {
+    height: 22px !important; 
+    min-height: 22px !important; 
+    border: 0px solid transparent !important;
+} 
+
+treechildren::-moz-tree-twisty {
+  padding-inline-end: 6px !important;
+  padding-inline-start: 6px !important;
+  margin-top: 5px !important;
+  margin-right: 6px !important;
+  margin-bottom: 5px !important;
+  border-radius: 2px !important;
+  background: #CDD7DD !important;
+}
+
+treechildren::-moz-tree-image(folderNameCol) {
+    background-image: url(file:///T:/Users/Administrator/AppData/Roaming/Thunderbird/Profiles/6ztqu4q0.AB/extensions/SunIcon5.png) !important;
+    background-size: 30% 30% !important;
+    background-position: left center !important;
+    background-repeat: no-repeat !important;
+    opacity: 0 !important;
+}
+
+#threadpane-splitter {
+    background-color: #465966 !important; 
+    color: #465966 !important; 
+    border: 1px solid #465966 !important;
+}
+
+#folderpane_splitter {
+    background-color: #465966 !important; 
+    color: #465966 !important; 
+    border: 1px solid #465966 !important;
+}
+
+#attachment-splitter {
+    background-color: #465966 !important; 
+    color: #465966 !important; 
+    border: 2px solid #465966 !important;
+}
+
+
+/* ______Message Content Pane Items_____*/
+
+#msgHeaderView {
+    background-color: #D8EFFE !important; 
+
+/*    background: rgba(224,224,224,.3)
+                  linear-gradient(rgba(170,232,252,.8), rgba(47,141,235,.6) 49%,
+                                                      rgba(32,133,234,.6) 51%, rgba(20,114,208,.3)) !important;   */
+
+    border: 0px solid transparent !important;
+}
+
+/* ______ Write Message Window Tweaks ______*/
+
+#compose-toolbox {
+    text-shadow: none !important;    
+    color: #000000 !important;
+    background: rgba(224,224,224,.6)
+                  linear-gradient(rgba(170,232,252,.8), rgba(47,141,235,.6) 49%,
+                                                      rgba(32,133,234,.6) 51%, rgba(20,114,208,.3)) !important;
+}
+
+#compose-toolbox toolbarbutton {
+    text-shadow: none !important;    
+    color: #12298E !important;
+    font-weight: 590 !important;
+    background-color: rgba(255,255,255,.7) !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+/* ______ Search Box Tweaks ______*/
+
+.searchBox > .textbox-input-box {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.searchBox[focused="true"] {
+    background-color: #FFFFFF !important;
+    color: #072AFF !important;
+}
+
+.searchBox:not([focused="true"]) {
+    background-color: #DADDE0 !important;
+    color: #072AFF !important;
+}
+
+.searchBox:hover {
+    background-color: #FFFFFF !important;
+    color: #072AFF !important;
+}
+
+
+/* ______ Calendar Tweaks ______*/
+
+#calendar-toolbox {	   
+/*    background-color: #BBEEFF !important;   */
+
+    background: rgba(224,224,224,.6)
+                  linear-gradient(rgba(170,232,252,.8), rgba(47,141,235,.6) 49%,
+                                                      rgba(32,133,234,.6) 51%, rgba(20,114,208,.3)) !important;
+
+    color: #12298E !important;
+    font-weight: 600 !important;
+}
+
+#calendar-toolbox toolbarbutton {
+    background-color: rgba(255,255,255,.7) !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+#calsidebar_splitter {
+    border-width: 0 !important;
+    width: 4px !important;
+    background-color: #465966 !important;
+}
+
+#button-save, #saveandcloseButton,
+#button-saveandclose, #acceptButton {
+    fill: darkgreen !important;
+}
+
+#deleteButton, #declineButton,
+#button-delete.cal-event-toolbarbutton {
+    fill: #BC0030 !important;
+}
+
+#button-attendees {
+    fill: #2085EA !important;
+}
+
+#button-privacy {
+    fill: #FF00FF !important;
+}
+
+#button-attach {
+    fill: #FFA400 !important;
+}
+
+calendar-list-tree > tree > treechildren {
+    background-color: #FEF6E2 !important;
+    color: #12298E !important; 
+}
+
+#calendar-panel {
+    background-color: #FBD06B !important;
+}
+
+#ltnSidebar {
+    background-color: #FEF6E2 !important;
+}
+
+calendar-day-label {
+    background-color: #FED4D4 !important;
+}
+
+/*
+tab[calview][selected="true"] {
+    background-color: red !important;
+}
+*/
+
+#today-pane-panel > sidebarheader {
+    background-color: #FBD06B !important;
+    color: #12298E !important;
+    font-weight: 600 !important;
+}
+
+.today-subpane {
+    background-color: #EDEDED !important;
+    color: #12298E !important;
+}
+
+#todaypane-new-event-button {
+    background-color: #EDEDED !important;
+    color: #12298E !important;
+    font-weight: 600 !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+#todaypane-new-event-button:hover {
+    background-color: #FFFFFF !important;
+    text-decoration: underline solid !important;
+}
+
+.reminder-icon {
+    fill: #0000FF !important;
+}
+
+minimonth {
+    background-color: #FBD06B !important;
+    border-top: 2px solid #FEF6E2 !important;
+    border-left: 2px solid #FEF6E2 !important;
+    border-right: 2px solid #D7971B !important;
+    border-bottom: 2px solid #D7971B !important;
+}
+
+#calMinimonthBox {
+    color: #12298E !important;
+}
+
+#calendar-nav-control {
+/*    background-color: #A8FDA8 !important;  */
+    background: rgba(215,151,27,.1)
+                  linear-gradient(rgba(254,215,123,.8), rgba(252,187,57,.6),
+                                                      rgba(248,159,39,.6), rgba(215,151,27,.5)) !important;
+}
+
+.view-header {
+    color: #000000 !important; 
+    font-weight: 600 !important;
+}
+
+/*
+#view-deck {
+    background-color: red !important;
+}
+*/
+
+/*
+tab[calview][selected="true"] {
+    background-color: red !important;
+}
+*/
+
+.navigation-inner-box > hbox {
+    background-color: #EDEDED !important;
+}
+
+.today-navigation-button {
+    background-color: #EDEDED !important;
+    color: #12298E !important; 
+    font-weight: 600 !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.today-navigation-button:hover {
+    background-color: #FFFFFF !important;
+    color: #12298E !important; 
+    text-decoration: underline solid !important;
+    font-weight: 600 !important;
+}
+
+.view-navigation-button {
+    background-color: #EDEDED !important;
+    color: #12298E !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.view-navigation-button:hover {
+    background-color: #FFFFFF !important;
+}
+
+.navigation-bottombox {
+    background-color: #EDEDED !important;
+}
+
+#calendar-view-box {
+    background-color: #FBD06B !important;
+    color: #000000 !important; 
+    border-top: 2px solid #FFFFFF !important;
+    border-left: 2px solid #FFFFFF !important;
+    border-right: 2px solid #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+}
+
+/*
+modevbox {
+    background-color: red !important;
+}
+*/
+
+modehbox {
+    background-color: #FBD06B !important;
+    color: #12298E !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+modehbox:hover {
+    background-color: #FFFFFF !important;
+    color: #12298E !important;
+}
+
+toolbarbutton[todaypane="true"] {
+    background-color: #2085EA !important;
+}
+
+minimonth-header {
+    background-color: #FEF6E2 !important;
+    color: #12298E !important;
+}
+
+minimonth-header toolbarbutton {
+    background-color: #FEF6E2 !important;
+    color: #12298E !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+minimonth-header toolbarbutton:hover {
+    background-color: #FFFFFF !important;
+}
+
+.today-subpane toolbarbutton {
+    background-color: #E0E0E0 !important;
+    color: #12298E !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+.today-subpane toolbarbutton:hover {
+    background-color: #FFFFFF !important;
+}
+
+/*
+tab[calview] {
+    background-color: red !important;
+}
+*/
+
+calendar-list-tree {
+    background-color: #FEF6E2 !important;
+    border-top: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+/*
+#bottom-events-box {
+    background-color: red !important;
+}
+*/
+
+/*
+#unifinder-searchBox {
+    background-color: red !important;
+}
+*/
+
+.unifinder-closebutton {
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+/* ______ Addressbook Tweaks ______*/
+
+#ab-toolbox {
+/*    background-color: #BBEEFF !important;   */
+
+    background: rgba(224,224,224,.4)
+                  linear-gradient(rgba(170,232,252,.8), rgba(47,141,235,.6) 49%,
+                                                      rgba(32,133,234,.6) 51%, rgba(20,114,208,.3)) !important;
+
+    color: #12298E !important;
+    font-weight: 600 !important;
+}
+
+#ab-toolbox toolbarbutton {
+    background-color: rgba(255,255,255,.7) !important;
+    color: #12298E !important;
+    border-top: 1px solid #FFFFFF !important;
+    border-left: 1px solid #FFFFFF !important;
+    border-right: 1px solid #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
+/*  Addressbook Contacts Groups - List */
+#dirTree {
+    background-color: #D0D8CB !important;
+}
+
+#dirTree-splitter {
+    border-width: 0 !important;
+    width: 4px !important;
+    background-color: #465966 !important;
+}
+
+/*___________________________________________*/
